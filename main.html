@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--M PLUS ROUNDEDのダウンロード-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@900&display=swap" rel="stylesheet">
+<!--Libre Baskervilleのダウンロード-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+<style>
+@charset "utf-8";
+
+body {
+          padding:40px 0;
+          font-family: 'M PLUS Rounded 1c';
+          background-color:#fff;
+          .textcontainer {padding:40px 0;text-align:center;}
+          .particletext {
+              font-family: 'Libre Baskerville', serif;
+              text-align:center;
+              font-size: 48px;
+              @media (max-width: 480px) {
+                font-size:30px;
+              }
+              position: relative;
+              &.confetti {
+                >.particle {
+                    opacity:0;
+                    position: absolute;
+                    animation: confetti 3s ease-in infinite;
+                    &.c1 {
+                      background-color:rgba(76,175,80,0.5);
+                    }
+                    &.c2 {
+                      background-color:rgba(156,39,176,0.5);
+                    }
+                }
+              }
+          }
+        }
+
+@keyframes confetti {
+  0% {
+      opacity:0;
+      transform:translateY(0%) rotate(0deg);
+  }
+  10% {
+      opacity:1;
+  }
+  35% {
+      transform:translateY(-800%) rotate(270deg);
+  }
+  80% {
+      opacity:1;
+  }
+  100% {
+      opacity:0;
+      transform:translateY(2000%) rotate(1440deg);
+  }
+}
+
+.normal_fadeIn {
+      padding:40px 0;
+      font-family: 'bebas', sans-serif;
+      text-align:center;
+      font-size:48px;
+      position: relative;
+      animation-name:fadeInAnime;
+      animation-duration:3s;
+      animation-fill-mode:forwards;
+      opacity:0;
+}
+.fadeIn{
+    padding:40px 0;
+    text-align:center;
+    font-size:1.2rem;
+    position: relative;
+    transform: translate3d(0, 100px, 0);
+    transition: opacity 1.5s, transform 1.5s;
+    opacity:0;
+    &.is-animated {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.circle_img {
+  width: 200px;
+  height:200px;
+  border-radius:50%;
+  object-fit: cover;
+
+  @media (max-width: 480px) {
+    width:125px; 
+    height:125px;
+  }
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex>p{
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: bold;
+    font-size: 1.3rem;
+    position: relative;
+
+    @media (max-width: 480px) {
+      font-size: 1.0rem
+    }
+}
+.messege{
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+
+    @media (max-width: 480px) {
+      font-size: 1.0rem
+    }
+}
+.letter {
+    font-family: 'M PLUS Rounded 1c';
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    margin: auto;
+
+    @media (max-width: 480px) {
+      font-size: 1.0rem
+    }  
+}
+.title {
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  @media (max-width: 480px) {
+    font-size:48px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="textcontainer normal_fadeIn">
+  <b><span class="particletext confetti">Tytle</span></b>
+</div>
+<p class="title normal_fadeIn">Original Albam</p>
+<div class='message normal_fadeInfadeIn' style="text-align:center; padding-top:40px; padding-bottom:100px;">※下に、スクロールすると自動的に写真が表示されます。</div>
+
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 20% 50%;' src="https://picsum.photos/seed/picsum/200/400"></p>
+  <p>message message</p>
+</div>
+<div class='flex fadeIn'>
+  <p>message message</p>
+  <p><img class='circle_img' style='object-position: 60% 50%;' src="https://picsum.photos/seed/picsum/200/100"></p>
+</div>
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 40% 40%;' src="https://picsum.photos/seed/picsum/200/200"></p>
+  <p>message massage</p>
+</div>
+<div class='flex fadeIn'>
+  <p>message message</p>
+  <p><img class='circle_img' style='object-position: 50% 50%;' src="https://picsum.photos/seed/picsum/200/300"></p>
+</div>
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 60% 30%;' src="https://picsum.photos/seed/picsum/200/500"></p>
+  <p>message messsage</p>
+</div>
+<div class='flex fadeIn'>
+  <p>message message</p>
+  <p><img class='circle_img' style='object-position: 50% 40%;' src="https://picsum.photos/seed/picsum/200/600"></p>
+</div>
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 50% 50%;' src="https://picsum.photos/seed/picsum/200/700"></p>
+  <p>message message</p>
+</div>
+<div class='flex fadeIn'>
+  <p>message message</p>
+  <p><img class='circle_img' style='object-position: 20% 50%;' src="https://picsum.photos/seed/picsum/200/800"></p>
+</div>
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 50% 50%;' src="https://picsum.photos/seed/picsum/200/900"></p>
+  <p>message message</p>
+</div>
+<div class='flex fadeIn'>
+  <p>message message</p>
+  <p><img class='circle_img' style='object-position: 50% 50%;' src="https://picsum.photos/seed/picsum/200/1000"></p>
+</div>
+<div class='flex fadeIn'>
+  <p><img class='circle_img' style='object-position: 50% 50%;' src="https://picsum.photos/seed/picsum/200/1100"></p>
+  <p>message message</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<p class="message fadeIn" style="font-size:1.5rem; text-align:center; padding-top:100px; padding-bottom:100px;" >Last Message</p>
+<div class="letter fadeIn">
+  <p>address</p>
+  <p>message</p>
+  <p>sender</p>
+</div>
+
+</body>
+
+<script>
+let targets = document.querySelectorAll('.fadeIn');//アニメーションさせたい要素
+let offset = 100;//アニメーションタイミング
+
+window.addEventListener('scroll', function() {//スクロールしたとき
+
+  var scroll = window.scrollY;//スクロール量を取得
+  var h = window.innerHeight;//画面の高さを取得
+
+  for(let target of targets) {
+    var pos = target.getBoundingClientRect().top + scroll;//アニメーションさせたい要素の位置を取得
+    if (scroll > pos - h + offset) {//スクロール量 > アニメーションさせたい要素の位置
+      target.classList.add('is-animated');
+    }
+  }
+
+});
+</script>
+
+<script>
+function confetti() {
+  $.each($(".particletext.confetti"), function(){
+      var confetticount = ($(this).width()/50)*10;
+      for(var i = 0; i <= confetticount; i++) {
+        $(this).append('<span class="particle c' + $.rnd(1,2) + '" style="top:' + $.rnd(10,50) + '%; left:' + $.rnd(0,100) + '%;width:' + $.rnd(6,8) + 'px; height:' + $.rnd(3,4) + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+      }
+  });
+}
+
+jQuery.rnd = function(m,n) {
+m = parseInt(m);
+n = parseInt(n);
+return Math.floor( Math.random() * (n - m + 1) ) + m;
+} 
+
+confetti()  
+</script>
+
+<script>
+  function colorfulBalloon(n, max, min) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.borderRadius = "50%";
+    balloon.style.position = "fixed";
+    balloon.style.zIndex = "-1";
+
+    for (var i = 0; i < n; i++) {
+        var balloonClone = balloon.cloneNode();
+
+        //HSLA 色で色を決定
+        balloonClone.style.backgroundColor = "hsla(" + Math.random() * 360 + ", 50%, 50%, .2)";
+
+        //最大値、最小値を考慮したバルーンサイズにする
+        var size = Math.random() * (max - min) + min;
+
+        //位置をランダムに
+        balloonClone.style.top = "calc(" + -1 * size * Math.random() + "px + " + Math.random() * 100 + "%)";
+        balloonClone.style.left = "calc(" + -1 * size * Math.random() + "px + " + Math.random() * 100 + "%)";
+        balloonClone.style.width = size + "px";
+        balloonClone.style.height = size + "px";
+        document.body.appendChild(balloonClone);
+    };
+
+}
+
+//バルーンの個数を10個、バルーンの最大値550px、最小値50px
+colorfulBalloon(10, 100, 50);
+</script>  
+</html>
