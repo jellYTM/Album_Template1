@@ -3,6 +3,10 @@
 Google Apps Script (GAS) を利用した、シンプルなオンライン写真アルバムのテンプレートプロジェクトです。
 スクロールに応じた画像のフェードインアニメーションや、紙吹雪・バルーンの演出が含まれています。
 
+**👉 [デモ版で実際の動作を確認する](https://script.google.com/macros/s/AKfycbzwn5L51WfwNO1fiMQqFwQ_OMPVRka29A8Nqjnyv20nPIoPMj8B05qLvxUmGoFFd5Ys/exec)**
+
+![Demo Screenshot](./demo.png)
+
 ## ファイル構成
 
 - **code.js**: WebアプリケーションとしてHTMLを配信するためのGASスクリプト（`doGet`関数）。
